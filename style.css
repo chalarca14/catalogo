@@ -28,8 +28,22 @@ body {
   flex-direction: column;
   top: 0;
   width: 100%;
+  position: fixed;
+  top: auto;
 }
 
+ul{
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  color: black;
+  gap: 2rem;
+}
+
+li{
+  text-decoration: none;
+  color: black;
+}
 .buscar {
   display: flex;
   justify-content: space-around;
