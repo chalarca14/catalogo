@@ -24,12 +24,11 @@ body {
   border-radius: 12px;
   display: flex;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 1rem;
   flex-direction: column;
   top: 0;
   width: 100%;
   position: fixed;
-  top: auto;
 }
 
 ul{
@@ -43,6 +42,12 @@ ul{
 li{
   text-decoration: none;
   color: black;
+  text-decoration: none;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
 }
 .buscar {
   display: flex;
@@ -64,6 +69,34 @@ li{
 .navbar:hover {
   transform: scale(1.05);
   color: #fff;
+}
+
+/* Input de búsqueda */
+.form-control {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #00bcd4; /* celeste moderno */
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0, 188, 212, 0.1);
+}
+
+/* Botón de búsqueda */
+.btn {
+  border-radius: 25px;
+  padding: 0.75rem 1.2rem;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #00bcd4, #0288d1);
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+li img{
+  filter: invert();
+  width: 2rem;
 }
 
 .items{
