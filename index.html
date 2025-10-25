@@ -7,17 +7,19 @@
     <title>Catalogo</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
-        <header class="item">
-        <div class="item">
+        <header id="inicio">
             <nav class="nav">
                 <div class="buscar">
                     <a class="navbar">Smartphones S.A.S</a>
                     <ul style="list-style-type: none;">
+                        <li><a href="#inicio">Inicio</a></li>
                         <li><a href="#samsung">Samsung</a></li>
                         <li><a href="#Iphone">Iphone</a></li>
                         <li><a href="#xiaomi">Xiaomi</a></li>
+                        <li><a href="#"><img src="img/carrito.png" alt="carrito"></a></li>
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
@@ -26,16 +28,21 @@
                 </div>
             </nav>
         </header>
-        <!-- <div class="item">Sidebar</div> -->
-        <div class="item">
+
+        <!-- CATALOGO  -->
+
+        <div class="items">
             <section id="samsung">
+                <h2>SAMSUNG</h2>
                 <div class="productos">
                     <div class="card">
                         <img src="img/s1.avif" alt="s25">
-                        <button><img src="img/fav.png" alt="fav"></button>
+                        <button class="fav" ><img src="img/fav.png" alt="fav"></button>
                         <p><b>Celular Samsung Galaxy S25 Ultra 5G 512Gb 12Ram Gris Titanio</b></p>
                         <span class="precio">$ 4.272.780</span>
-                        <button class="ver-detalle" data-nombre="Samsung Galaxy S25 Ultra 5G" data-precio="$4.272.780"
+                        <button class="carrito" onclick="aggCarrito"><b>Agregar al carrito</b></button>
+                        <button class="ver-detalle" data-nombre="Samsung Galaxy S25 Ultra 5G"
+                            data-precio="$4.272.780"
                             data-descripcion="Celular de gama alta con cámara de 200MP, pantalla AMOLED 6.8 y 12 GB RAM."
                             data-imagen="img/s1.avif">Ver
                         </button>
@@ -43,10 +50,12 @@
 
                     <div class="card">
                         <img src="img/s2.webp" alt="a56">
-                        <button><img src="img/fav.png" alt="fav"></button>
+                        <button class="fav" ><img src="img/fav.png" alt="fav"></button>
                         <p><b>Celular SAMSUNG Galaxy A56 5G 256 GB 8 GB RAM Rosado</b></p>
                         <span class="precio">$ 1.586.040</span>
-                        <button class="ver-detalle" data-nombre="Samsung Galaxy A56 5G" data-precio="$1.586.040"
+                        <button class="carrito" onclick="aggCarrito"><b>Agregar al carrito</b></button>
+                        <button class="ver-detalle" data-nombre="Samsung Galaxy A56 5G"
+                            data-precio="$1.586.040"
                             data-descripcion="Smartphone con gran pantalla AMOLED de 6.7'', 8 GB RAM y cámara triple de 50MP."
                             data-imagen="img/s2.webp">Ver
                         </button>
@@ -54,10 +63,12 @@
 
                     <div class="card">
                         <img src="img/s3.webp" alt="s24">
-                        <button><img src="img/fav.png" alt="fav"></button>
+                        <button class="fav" ><img src="img/fav.png" alt="fav"></button>
                         <p><b>Samsung Galaxy S24 Ultra 256 Gb 5G Gris</b></p>
                         <span>4.079.899</span>
-                        <button class="ver-detalle" data-nombre="Samsung Galaxy S24 Ultra" data-precio="$4.079.899"
+                        <button class="carrito" onclick="aggCarrito"><b>Agregar al carrito</b></button>
+                        <button class="ver-detalle" data-nombre="Samsung Galaxy S24 Ultra"
+                            data-precio="$4.079.899"
                             data-descripcion="Pantalla AMOLED 6.8'', procesador Snapdragon 8 Gen 3, 256 GB y cámara de 200 MP."
                             data-imagen="img/s3.webp">Ver
                         </button>
@@ -65,10 +76,12 @@
 
                     <div class="card">
                         <img src="img/s4.webp" alt="s25+">
-                        <button><img src="img/fav.png" alt="fav"></button>
+                        <button class="fav" ><img src="img/fav.png" alt="fav"></button>
                         <p><b>Celular SAMSUNG GALAXY S25+ 5G 256 GB 12 GB RAM AZUL</b></p>
                         <span>$ 5.491.104</span>
-                        <button class="ver-detalle" data-nombre="Samsung Galaxy S25+ 5G" data-precio="$5.491.104"
+                        <button class="carrito" onclick="aggCarrito"><b>Agregar al carrito</b></button>
+                        <button class="ver-detalle" data-nombre="Samsung Galaxy S25+ 5G"
+                            data-precio="$5.491.104"
                             data-descripcion="Versión avanzada del S25 con pantalla 120Hz, cámara triple y batería de 4800mAh."
                             data-imagen="img/s4.webp">Ver
                         </button>
@@ -76,10 +89,12 @@
 
                     <div class="card">
                         <img src="img/s5.webp" alt="z-flip">
-                        <button><img src="img/fav.png" alt="fav"></button>
+                        <button class="fav" ><img src="img/fav.png" alt="fav"></button>
                         <p><b>Celular Samsung Galaxy Z Flip 4 256Gb Negro Reacondicionado</b></p>
                         <span>$ 1.988.900</span>
-                        <button class="ver-detalle" data-nombre="Samsung Galaxy Z Flip 4" data-precio="$1.988.900"
+                        <button class="carrito" onclick="aggCarrito"><b>Agregar al carrito</b></button>
+                        <button class="ver-detalle" data-nombre="Samsung Galaxy Z Flip 4"
+                            data-precio="$1.988.900"
                             data-descripcion="Diseño plegable con pantalla AMOLED flexible de 6.7'', procesador Snapdragon 8+."
                             data-imagen="img/s5.webp">Ver
                         </button>
@@ -90,98 +105,168 @@
             <br>
             <!-- IPHONES -->
             <section id="Iphone">
+                <h2>IPHONE</h2>
                 <div class="productos">
                     <div class="card">
                         <img src="img/i16.webp" alt="i16P">
-                        <button><img src="img/fav.png" alt="fav"></button>
-                        <p><b>Iphone 13 128Gb Rosa Reacondicionado/b></p>
+                        <button class="fav" ><img src="img/fav.png" alt="fav"></button>
+                        <p><b>Iphone 13 128Gb Rosa Reacondicionado</b></p>
                         <span class="precio">$ 1.415.899</span>
+                        <button class="carrito" onclick="aggCarrito"><b>Agregar al carrito</b></button>
+                        <button class="ver-detalle" data-nombre="Iphone 13 128Gb Rosa Reacondicionado"
+                            data-precio="$1.415.899"
+                            data-descripcion="Versión reacondicionada con 128 GB de almacenamiento, cámara dual de 12 MP y chip A15 Bionic."
+                            data-imagen="img/i16.webp">Ver</button>
                     </div>
 
                     <div class="card">
                         <img src="img/i2.webp" alt="i13P">
-                        <button><img src="img/fav.png" alt="fav"></button>
+                        <button class="fav" ><img src="img/fav.png" alt="fav"></button>
                         <p><b>Iphone 16 Pro Max 256Gb Desierto Titanio Esim</b></p>
                         <span class="precio">$ 5.395.900</span>
+                        <button class="carrito" onclick="aggCarrito"><b>Agregar al carrito</b></button>
+                        <button class="ver-detalle"
+                            data-nombre="Iphone 16 Pro Max 256Gb Desierto Titanio Esim" data-precio="$5.395.900"
+                            data-descripcion="Modelo más reciente de Apple con chip A18 Pro, cámara triple de 48 MP y conectividad eSIM."
+                            data-imagen="img/i2.webp">Ver</button>
                     </div>
 
                     <div class="card">
                         <img src="img/i3.webp" alt="i16">
-                        <button><img src="img/fav.png" alt="fav"></button>
+                        <button class="fav" ><img src="img/fav.png" alt="fav"></button>
                         <p><b>Iphone 16 128Gb Negro</b></p>
                         <span class="precio">$ 2.979.900</span>
+                        <button class="carrito" onclick="aggCarrito"><b>Agregar al carrito</b></button>
+                        <button class="ver-detalle" data-nombre="Iphone 16 128Gb Negro"
+                            data-precio="$2.979.900"
+                            data-descripcion="Iphone 16 con chip A17, pantalla OLED de 6.1 pulgadas y cámara mejorada para retratos."
+                            data-imagen="img/i3.webp">Ver</button>
                     </div>
 
                     <div class="card">
                         <img src="img/i4.webp" alt="i15">
-                        <button><img src="img/fav.png" alt="fav"></button>
+                        <button class="fav" ><img src="img/fav.png" alt="fav"></button>
                         <p><b>Iphone 15 128Gb Nuevo Rosado</b></p>
                         <span class="precio">$ 2.505.900</span>
+                        <button class="carrito" onclick="aggCarrito"><b>Agregar al carrito</b></button>
+                        <button class="ver-detalle" data-nombre="Iphone 15 128Gb Nuevo Rosado"
+                            data-precio="$2.505.900"
+                            data-descripcion="Diseño elegante en color rosado, pantalla Super Retina XDR y cámara de 48 MP."
+                            data-imagen="img/i4.webp">Ver</button>
                     </div>
 
                     <div class="card">
                         <img src="img/i5.webp" alt="i14">
-                        <button><img src="img/fav.png" alt="fav"></button>
+                        <button class="fav" ><img src="img/fav.png" alt="fav"></button>
                         <p><b>Iphone 14 128Gb Medianoche Reacondicionado</b></p>
                         <span class="precio">$ 1.729.900</span>
+                        <button class="carrito" onclick="aggCarrito"><b>Agregar al carrito</b></button>
+                        <button class="ver-detalle" data-nombre="Iphone 14 128Gb Medianoche Reacondicionado"
+                            data-precio="$1.729.900"
+                            data-descripcion="Modelo reacondicionado con chip A15, cámara doble avanzada y excelente rendimiento energético."
+                            data-imagen="img/i5.webp">Ver</button>
                     </div>
+
                 </div>
             </section>
 
+            <br>
+
             <!-- XIAOMIS -->
             <section id="xiaomi">
+                <h2>XIAOMI</h2>
                 <div class="productos">
+
                     <div class="card">
                         <img src="img/x1.webp" alt="r14p">
-                        <button><img src="img/fav.png" alt="fav"></button>
+                        <button class="fav"><img src="img/fav.png" alt="fav"></button>
                         <p><b>Celular Xiaomi Redmi Note 14 Pro 5G 256Gb 8Ram Negro</b></p>
-                        <span>$ 978.405</span>
+                        <span class="precio">$ 978.405</span>
+                        <button class="carrito" onclick="aggCarrito"><b>Agregar al carrito</b></button>
+                        <button class="ver-detalle"
+                            data-nombre="Xiaomi Redmi Note 14 Pro 5G 256Gb 8Ram Negro" data-precio="$978.405"
+                            data-descripcion="Pantalla AMOLED de 120Hz, cámara principal de 200 MP y procesador Snapdragon 7s Gen 2."
+                            data-imagen="img/x1.webp">Ver</button>
                     </div>
 
                     <div class="card">
                         <img src="img/x2.webp" alt="r14+">
+                        <button class="fav"><img src="img/fav.png" alt="fav"></button>
+                        <p><b>Celular Xiaomi Redmi Note 14 Pro+ 5G 512Gb 12Ram Negro</b></p>
+                        <span class="precio">$ 1.313.753</span>
+                        <button class="carrito" onclick="aggCarrito"><b>Agregar al carrito</b></button>
+                        <button class="ver-detalle"
+                            data-nombre="Xiaomi Redmi Note 14 Pro+ 5G 512Gb 12Ram Negro" data-precio="$1.313.753"
+                            data-descripcion="Versión Pro+ con carga rápida de 120W y cámara Sony IMX707 de alta calidad."
+                            data-imagen="img/x2.webp">Ver</button>
                         <button><img src="img/fav.png" alt="fav"></button>
                         <p><b>Celular Xiaomi Redmi Note 14 Pro 5G 256Gb 8Ram Negro</b></p>
-                        <span>$ 1.313.700</span>
+                        <span>$ 1.313.700</spa
                     </div>
 
                     <div class="card">
                         <img src="img/x3.webp" alt="px7">
-                        <button><img src="img/fav.png" alt="fav"></button>
+                        <button class="fav"><img src="img/fav.png" alt="fav"></button>
                         <p><b>Celular Xiaomi Poco X7 Pro 12Gb Ram 512Gb Negro</b></p>
-                        <span>$ 1.295.904</span>
+                        <span class="precio">$ 1.295.904</span>
+                        <button class="carrito" onclick="aggCarrito"><b>Agregar al carrito</b></button>
+                        <button class="ver-detalle" data-nombre="Xiaomi Poco X7 Pro 12Gb Ram 512Gb Negro"
+                            data-precio="$1.295.904"
+                            data-descripcion="Diseño moderno con pantalla AMOLED 120Hz, batería de 5000mAh y chip MediaTek Dimensity 8300-Ultra."
+                            data-imagen="img/x3.webp">Ver</button>
                     </div>
 
                     <div class="card">
                         <img src="img/x4.webp" alt="x14t">
-                        <button><img src="img/fav.png" alt="fav"></button>
+                        <button class="fav"><img src="img/fav.png" alt="fav"></button>
                         <p><b>Celular XIAOMI 14T PRO 5G 512 GB 12 GB RAM Gris</b></p>
-                        <span>$ 2.869.110</span>
+                        <span class="precio">$ 2.869.110</span>
+                        <button class="carrito" onclick="aggCarrito"><b>Agregar al carrito</b></button>
+                        <button class="ver-detalle" data-nombre="Xiaomi 14T PRO 5G 512 GB 12 GB RAM Gris"
+                            data-precio="$2.869.110"
+                            data-descripcion="Alta potencia con chip Dimensity 9200+, carga ultra rápida de 120W y cámara Leica profesional."
+                            data-imagen="img/x4.webp">Ver</button>
                     </div>
 
                     <div class="card">
                         <img src="img/x5.webp" alt="x15t">
-                        <button><img src="img/fav.png" alt="fav"></button>
+                        <button class="fav"><img src="img/fav.png" alt="fav"></button>
                         <p><b>Celular Xiaomi 15 5G 512Gb 12Ram Verde</b></p>
-                        <span>$ 3.929.488</span>
+                        <span class="precio">$ 3.929.488</span>
+                        <button class="carrito" onclick="aggCarrito"><b>Agregar al carrito</b></button>
+                        <button class="ver-detalle" data-nombre="Xiaomi 15 5G 512Gb 12Ram Verde"
+                            data-precio="$3.929.488"
+                            data-descripcion="Tope de gama de Xiaomi con pantalla CrystalRes 2K, Snapdragon 8 Gen 3 y cuerpo de aluminio verde."
+                            data-imagen="img/x5.webp">Ver</button>
                     </div>
 
                 </div>
             </section>
+        </div>
+        <br>
+        <br>
+        <!-- Sección 1: Información de la empresa -->
         <footer>
             <div class="footer-container">
-        <!-- Sección 1: Información de la empresa -->
-        <div class="footer-section">
-            <h3>Smartphones S.A.S</h3>
-            <p>Tu tienda de confianza para los mejores celulares del mercado. Calidad garantizada y los mejores precios.</p>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/?locale=es_LA" target="_blank" aria-label="Facebook"><img src="img/icons8-facebook-nuevo-48.png" alt="facebook"></a>
-                <a href="https://www.whatsapp.com/?lang=es" target="_blank" aria-label="whatsapp"><img src="img/icons8-whatsapp-48.png" alt="whatsapp"></a>
-                <a href="https://www.instagram.com/" target="_blank" aria-label="instagram"><img src="img/icons8-instagram-48.png" alt="instagram"></a>
-                <a href="https://x.com/?lang=es" target="_blank" aria-label="X"><img src="img/icons8-x-50.png" alt="X"></a>
-            </div>
-        </div>
+                <div class="footer-section">
+                    <h3>Smartphones S.A.S</h3>
+                    <p>Tu tienda de confianza para los mejores celulares del mercado. Calidad garantizada y los
+                        mejores precios.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/?locale=es_LA" target="_blank" aria-label="Facebook"><img
+                                src="img/icons8-facebook-nuevo-48.png" alt="facebook"></a>
+                        <a href="https://www.whatsapp.com/?lang=es" target="_blank" aria-label="whatsapp"><img
+                                src="img/icons8-whatsapp-48.png" alt="whatsapp"></a>
+                        <a href="https://www.instagram.com/" target="_blank" aria-label="instagram"><img
+                                src="img/icons8-instagram-48.png" alt="instagram"></a>
+                        <a href="https://x.com/?lang=es" target="_blank" aria-label="X"><img
+                                src="img/icons8-x-50.png" " alt=" X"></a>
+                    </div>
+                </div>
         </footer>
+    </div>
+
+
 </body>
 
 </html>
