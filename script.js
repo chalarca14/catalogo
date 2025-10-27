@@ -48,3 +48,53 @@ modal.addEventListener('click', (e) => {
         modal.setAttribute('aria-hidden', 'true');
     }
 });
+
+// ====== FILTRO DE BÚSQUEDA MEJORADO ======
+const buscador = document.getElementById('buscador');
+const formBusqueda = document.getElementById('form-busqueda');
+const productos = document.querySelectorAll('.card');
+const secciones = document.querySelectorAll('section'); // Para controlar los títulos SAMSUNG, IPHONE, XIAOMI
+
+// Evita que el formulario recargue la página
+formBusqueda.addEventListener('submit', (e) => e.preventDefault());
+
+buscador.addEventListener('input', () => {
+  const texto = buscador.value.toLowerCase().trim();
+  let encontrados = 0;
+
+  productos.forEach(producto => {
+    const nombre = producto.querySelector('p').textContent.toLowerCase();
+    const descripcion = producto.querySelector('.ver-detalle').dataset.descripcion.toLowerCase();
+
+    if (nombre.includes(texto) || descripcion.includes(texto)) {
+      producto.style.display = ''; // Mostrar producto
+      encontrados++;
+    } else {
+      producto.style.display = 'none'; // Ocultar producto
+    }
+  });
+
+  // Ocultar secciones vacías (sin productos visibles)
+  secciones.forEach(seccion => {
+    const cardsVisibles = seccion.querySelectorAll('.card:not([style*="display: none"])');
+    if (cardsVisibles.length === 0) {
+      seccion.style.display = 'none';
+    } else {
+      seccion.style.display = '';
+    }
+  });
+
+  // Mostrar mensaje si no hay resultados
+  let mensaje = document.getElementById('sin-resultados');
+  if (!mensaje) {
+    mensaje = document.createElement('p');
+    mensaje.id = 'sin-resultados';
+    mensaje.textContent = 'No se encontraron productos.';
+    mensaje.style.textAlign = 'center';
+    mensaje.style.marginTop = '30px';
+    mensaje.style.fontSize = '1.2em';
+    mensaje.style.fontWeight = 'bold';
+    document.querySelector('.items').appendChild(mensaje);
+  }
+  mensaje.style.display = encontrados === 0 ? 'block' : 'none';
+});
