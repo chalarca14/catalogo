@@ -104,11 +104,19 @@ a:hover {
   color: #fff;
   border: none;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 li img {
   filter: invert();
   width: 2rem;
+  transform: scale(1);
+  transition: all 2s;
+}
+
+li img:hover{
+  transform: scale(1.2);
+  transition: all 1s;
 }
 
 .items {
@@ -126,7 +134,14 @@ li img {
   box-shadow: 0 8px 12px #0c043b;
   width: 1332px;
   height: 500px;
-  margin-top: 50px;
+  margin-top: 10px;
+}
+
+h2{
+  text-align: center;
+  margin-bottom: 50px;
+  text-shadow: #0000004f 2px 4px 2px;
+
 }
 
 .card {
@@ -166,6 +181,25 @@ li img {
 
 .card p {
   font-size: 14px;
+  width: 130px;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+  bottom: 45px;
+  right: -10px;
+  text-transform: uppercase;
+}
+
+.precio{
+  font-size: 1rem;
+  margin-top: -20px;
+  margin-bottom: 28px;
+}
+
+.big{
+  width: 160px !important;
+  margin-right: 20px !important;
 }
 
 .fav {
@@ -194,6 +228,7 @@ li img {
   width: max-content;
   border-radius: 200px;
   border: none;
+  cursor: pointer;
 
 }
 
@@ -208,6 +243,7 @@ li img {
 .carrito img:hover {
   transform: rotate(360deg);
   transition: all 1s ease;
+  box-shadow: #0c043b 2px 5px 5px;
 }
 
 .ver-detalle {
@@ -223,6 +259,13 @@ li img {
   position: relative;
   bottom: 40px;
   right: -100px;
+  transform: rotateX('angle');
+}
+
+.ver-detalle:hover {
+  background: linear-gradient(135deg, #0288d1, #00bcd4);
+  box-shadow: 4px 8px 8px #0c043b;
+  font-size: 1rem;
 }
 
 /* Detalle del producto (modal)*/
@@ -265,4 +308,46 @@ li img {
   padding: 0.5rem 1rem;
   border-radius: 8px;
   cursor: pointer;
+}
+
+
+footer{
+  text-align: center;
+  font-size: 1rem;
+  padding: 20px;
+  background-color: #04223b;
+  color: white;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-icons{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  width: 50px;
+  background: linear-gradient(135deg, #5f8f96, #bdc9cf);
+  border-radius: 50px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transform: scale(1);
+  transition: all 2s;
+}
+
+.social-icons a:hover{
+  margin-right: 100px;
+  width: 140px;
+  overflow: visible;
+  color: #000;
 }
